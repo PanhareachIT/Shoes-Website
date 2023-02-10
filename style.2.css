@@ -1,0 +1,587 @@
+:root{
+    --bg-title: linear-gradient(to right, #c72092,#6c14d0);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    /* height: 500vh; */
+    display: flex;
+    flex-direction: column;
+    
+}
+.container > nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    background: white;
+    z-index: 1000;
+    position: fixed;
+}
+.container > .nav .logo{
+      font-size: 35px;  
+      color:#c72092;;
+}
+.container > nav > .nav-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+.container > nav > .nav-center > li > a{
+    padding: 20px 10px;
+    display: inline-block;
+    color: black;
+    transition: all 0.2 linear;
+    text-decoration: none;
+}
+.container > nav > .nav-center > li > a:hover{
+    color: red;
+}
+.container > nav > .nav-right{
+    display: flex;
+
+}
+.container > nav > .nav-right a{
+    padding: 20px 10px;
+    display: inline-block;
+}
+.container .bg-img{
+    background-image: url(./image/bg1.png);
+    width: 100%;
+    /* height: 100vh; */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    padding: 40px 0px;
+}
+.container .bg-img > .left-main{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 0px 50px;
+
+}
+.container .bg-img > .left-main > .title{
+    position: relative;
+    font-size: 80px;
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color  : transparent; */
+    /* background:   linear-gradient(to right, #c72092,#6c14d0); */
+    color: linear-gradient(to right, #c72092,#6c14d0);
+    /* color: rebeccapurple; */
+    background: linear-gradient(to right, #c72092,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 70px;
+    margin-bottom: 50px;
+}
+.container .bg-img > .left-main >  a{
+    margin-top: 50px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    background: linear-gradient(to right,#c72092 , #6c14d0);
+}
+.container .bg-img > .center-main{
+    /* width: 45%; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .bg-img > .center-main > .image{
+    width: 100%;
+    height: 100%;
+}
+.container .bg-img > .center-main > .image > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.container .bg-img > .right-main{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+/* .container .bg-img > .right-main > li {
+    width: 40px;
+    height: 40px;
+} */
+.container .bg-img > .right-main > i{
+    /* width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; */
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.container .product{
+    width: 100%;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .product > h1{
+    font-size: 60px;
+    margin: 30px 0px;
+    background: linear-gradient(to right, #c72092,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+.container .product .box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* gap: 20px; */
+
+}
+.container .product .box > .card{
+    width: 290px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 8px #6c14d0;
+    padding: 20px 25px;
+    background: #f6f6f6;
+    margin-top: 25px;
+    position: relative;
+   
+   
+}
+.container .product .box > .card:hover > .small-card{
+    opacity: 1;
+    left: 20px;
+}
+
+.container .product .box > .card > .small-card{
+    position: absolute;
+    top: 20px;
+    /* left: 15px; */
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.container .product .box > .card > .small-card > i{
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 2px 0px;
+}
+.container .product .box > .card > .image{
+    width: 150px;
+    /* height: 150px; */
+}
+.container .product .box > .card > .image >img{
+    width: 100%;
+    /* width: 150px; */
+    
+    /* height: 100%;
+    height: 220px;  */
+    object-fit: cover;
+    object-position: center;
+}
+.container .product .box > .card > p{
+    text-align: center;
+    font-size: 17px;
+
+}
+.container .product .box > .card > h2{
+    font-size: 25px;
+}
+.container .product .box > .card > a{
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    background: linear-gradient(to right, #c72092 , #6c14d0);
+    text-decoration: none;
+    border-radius: 10px;
+}
+.container .about{
+    width: 100%;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .about > .title{
+    font-size: 60px;
+    margin: 30px 0px;
+    background: linear-gradient(to right, #c72092,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.container .about >.about-bottom{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    gap: 1%;
+}
+.container .about > .about-bottom > .about-left{
+    width: 18%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4,24%);
+    row-gap: 1.25%;
+    
+}
+.container .about > .about-bottom > .about-left > .image{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.6);
+    background: linear-gradient(to right, #6c14d0 , #c72092);
+}
+.container .about > .about-bottom > .about-left > .image > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.container .about > .about-bottom >  .about-center{
+    width: 40%;
+    height: 100%;
+    box-shadow: 0 0 8px #6c14d0;
+    border-radius: 10px;
+}
+.container .about > .about-bottom >  .about-center > .image{
+    width: 80%;
+    height: 80%;
+    margin-left: 55px;
+}
+.container .about > .about-bottom >  .about-center > .image > img{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 65px;
+    
+    /* margin: auto; */
+    /* object-fit: cover;
+    object-position: center; */
+}
+.container .about > .about-bottom >  .about-right{
+    width: 42%;
+    height: 100%;
+    /* justify-content: center; */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 8px #c72092;
+    padding: 25px;
+    /* position: relative; */
+    border-radius: 10px;
+    
+}
+.container .about > .about-bottom >  .about-right > p{
+    width: 100%;
+    /* height: 80%; */
+    font-size: 18px;
+    /* position: absolute; */
+    /* top: 25%;
+    left: 25%; */
+}
+.container > .review{
+    width: 100%;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container > .review > h1{
+    font-size: 60px;
+    background:linear-gradient(to right, #c72092,#6c14d0);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 30px 0px;
+}
+.container > .review > .review-box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 25px;
+    column-gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+/* dont have height yet  */
+.container > .review > .review-box > .card{
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); ;
+    background: #f3f1f1;
+}
+.container > .review > .review-box > .card > .card-top{
+    display: flex;
+    width: 100%;
+    padding: 25px  25px;
+    align-items: center;
+}
+.container > .review > .review-box > .card > .card-top > .image{
+    width: 60px;
+    height: 60px;
+    margin-right: 25px;
+    border-radius: 100%;
+}
+.container > .review > .review-box > .card > .card-top > .card-top-left{
+    display: flex;
+    flex-direction: column;
+}
+.container > .review > .review-box > .card > .card-top > .card-top-left > .star{
+    margin-top: 10px;
+}
+.container > .review > .review-box > .card > .card-top > .card-top-left > .star > i{
+    margin-right: 1px;
+} 
+.container > .review > .review-box > .card > .card-top > .image > img{
+    width: 100%;
+    height: 100%;  
+    border-radius: 100%;
+}
+.container > .review > .review-box > .card > .card-top > .card-top-left{
+    display: flex;
+}
+.container > .review > .review-box > .card > .description{
+    display: inline-block;
+    padding: 0px 25px 25px 25px;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.6;
+    font-weight: 500%;
+}
+.container .service{
+    width: 100%;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .service .title{
+    font-size: 60px;
+    background: var(--bg-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+    margin: 30px 0px;
+}
+.container .service .service-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+}
+.container .service .service-card .service-box{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+.container .service .service-card .service-box i{
+    font-size: 60px;
+    color: rgb(242, 242, 14);
+}
+.container .service .service-card .service-box h3{
+    font-size: 20px;
+}
+.container .service .service-card .service-box p{
+    color: rgb(119, 116, 116);
+    font-size: 18px;
+}
+.container > .login{
+    width: 100%;
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    /* background-image: url(./image/loging_bg.png); */
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+}
+.container .login .login-left{
+    width: 60%;
+}
+.container .login .login-left .image{
+    width: 80%;
+}
+.container .login .login-left .image img{
+    width: 100%;
+}
+.container .login .login-right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    /* background-color: #c72092; */
+    justify-content: flex-start;
+}
+.container .login .login-right h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+} 
+.container .login .login-right form > p{
+    font-size: 20px;
+    font-weight: bold;
+    /* margin-bottom: 20px; */
+}
+.container .login .login-right form > .user,
+.container .login .login-right form > .password
+{
+    border: 2px solid #6c14d0;
+    border-radius: 8px;
+    width: 280px;
+    /* display: inline; */
+    /* display: flex; */
+    padding: 8px 0px 8px 15px;
+    column-gap: 10px;
+    margin: 10px 0px;
+
+}
+.container .login .login-right form > .user >i,
+.container .login .login-right form > .password > i
+{
+    color: purple;
+}
+.container .login .login-right form > .user > input,
+.container .login .login-right form > .password > input
+{
+    outline: none;
+    border: none;
+    margin-left: 10px;
+}
+.container .login .login-right > .forget{
+    width: 270px;
+    position: relative;
+}
+.container .login .login-right > .forget > p{
+    margin-bottom: 10px;
+    position: relative;
+    /* border: 1px solid red; */
+    /* margin-left: auto; */
+    /* margin-right: auto;  */
+    margin-left: auto;
+    right: -60%;
+    font-size: 16px;
+    /* right: 100%; */
+    /* left: 50%;
+    margin-left: auto; */
+    /* left: 70% ; */
+    /* width: 150px; */
+    /* margin-left: auto; */
+}
+.container .login .login-right > input{
+    width: 270px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #c72092 , #6c14d0);
+
+}
+.container .login .login-right > .social-icon {
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.container .login .login-right > .social-icon > a{
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+.container .login .login-right > .social-icon > a > img{
+    width: 100%;
+    height: 100%;
+}
+.container .footer{
+    width: 100%;
+    height: 250px;
+    background-color: wheat;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.container .footer .get-help,
+.container .footer .our-store,
+.container .footer .follow,
+.container .footer .newslettter,
+.container .footer .contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    /* margin-left: 10px; */
+}
+.container .footer .contact > h3,
+.container .footer .get-help > h3,
+.container .footer .our-store > h3,
+.container .footer .follow > h3,
+.container .footer .newsletter > h3{
+    color: rgb(60, 60, 188);
+    font-size: 30px;
+    font-weight: bold;
+}
+.container .footer .contact > .icon{
+    display: flex;
+    /* flex-direction: column; */
+}
+.container .footer .follow .social-icon{
+    display: flex;
+    column-gap: 18px;
+    margin-left: 15px;
+}
+.container .footer .follow .newsletter{
+    display: flex;
+}
+.container .footer .newsletter > input{
+    width: 270px;
+    /* background-color: gray; */
+    border-radius: 100px;
+    padding: 10px;
+    color: white;
+    outline: none;
+    margin: 15px 0px 10px 0px;
+}
+.container .footer .newsletter > button{
+    padding: 8px;
+    /* -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
+    border-radius: 10px;
+    background: linear-gradient(to right, #c72092 , #6c14d0);
+}
+
